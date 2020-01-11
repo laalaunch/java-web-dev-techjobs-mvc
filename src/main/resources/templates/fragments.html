@@ -27,20 +27,17 @@
         </div>
     </div>
 
-    <table th:fragment="job-listing" class="job-listing" th:each="job : ${jobs}">
-        <tbody>
-            <tr>
+            <tr th:fragment="job-listing" th:each="job : ${jobs}" class="table table-striped">
                 <td>
                     <p th:text='${"ID:  " + job.id}'></p>
-                    <p th:text='${"Name:  " + job.name}'></p>
+                    <p th:text='${"Name: " + job.name}'></p>
                     <p th:text='${"Employer:  " + job.employer}'></p>
                     <p th:text='${"Location:  " + job.location}'></p>
                     <p th:text='${"Position Type:  " + job.positionType}'></p>
                     <p th:text='${"Skill:  " + job.coreCompetency}'></p>
+
                 </td>
             </tr>
-        </tbody>
-    </table>
 
 </body>
 </html>
